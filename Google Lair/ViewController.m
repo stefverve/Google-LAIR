@@ -16,9 +16,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back to the Front Door" style:UIBarButtonItemStylePlain target:self action:@selector(backToDoorway)];
+    self.navigationItem.rightBarButtonItem = backButton;
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void) backToDoorway {
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
